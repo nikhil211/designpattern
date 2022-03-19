@@ -24,6 +24,7 @@ public:
 	int getWidth() {return _width;}
 	int getHeight() {return _height;}
 	int getBrightness() {return _brightness;}
+	int* getAddressOfWidthVariable() {return &_width;}
 	void displaySetting() {
 		cout << "brightness: " << _brightness << endl;
 		cout << "height: " << _height << endl;
@@ -43,6 +44,7 @@ int main() {
 	GameSetting *setting = GameSetting::getInstace();
 	setting->displaySetting();
 	setting->setBrighness(100);
+	setting->getAddressOfWidthVariable();
 	
 	someFunction();
 	return 0;
